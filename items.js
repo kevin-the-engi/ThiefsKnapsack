@@ -31,11 +31,4 @@ const items = [
   }
 ];
 
-// class Items {
-//   constructor(value, weight) {
-//     this.weight = weight;
-//     this.value = value;
-//   }
-// }
-
 module.exports = items;
