@@ -1,4 +1,4 @@
-const Items = require('./items.js');
+const items = require('./items.js');
 
 class KnapSack {
   constructor(weight) {
@@ -21,7 +21,7 @@ class KnapSack {
   }
 
   checkWeight(weight) {
-    if (this.totalWeight + weight < this.weightLimit) {
+    if (this.totalWeight + weight <= this.weightLimit) {
       return true;
     }
 
@@ -43,7 +43,7 @@ class KnapSack {
       this.totalValue = mainValue;
 
       if (i !== items.length - 1) {
-        for (let j = i + 1; i < items.length j++) {
+        for (let j = i + 1; j < items.length; j++) {
           let weight = items[j].weight;
           let value = items[j].value;
 
@@ -58,5 +58,7 @@ class KnapSack {
         this.updateMaxValue();
       }
     }
+
+    return this.maxValue;
   }
 }
